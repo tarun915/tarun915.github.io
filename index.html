@@ -14,7 +14,13 @@
         <script src="jquery.ui.touch-punch.min.js"></script>
         <script>
         $( function() {
-          $( "#drghtml" ).draggable();
+          $("#drghtml").draggable();
+          $("#drghtml").click(function(){
+              if ( $(this).is('.ui-draggable-dragging') ) {
+                   return;
+              }
+            openoldsite()
+           });
           $( "#drginternal" ).draggable();
           $( "#drgfolder" ).draggable();
         } );
@@ -26,7 +32,7 @@
       <script defer src='dragging.js'></script>
         <div id='main'>
           <div id='icons'>
-            <div ondblclick="openoldsite()">
+            <div>
               <div id= 'drghtml' id='html'>
                 <img alt="html" src="images/html.png" width="90" height="100">
                 <p class='html'>File 1</p>
