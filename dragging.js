@@ -10,3 +10,7 @@ function openoldsite() {
 function denied() {
   alert( "Access Denied" );
 }
+
+function runterm(txt) {
+
+}

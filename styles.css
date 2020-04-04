@@ -18,23 +18,18 @@ body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    position: ;
 }
 
 
-}
+
 .htmlv1 {
     position: relative;
     color: #002fff;
     position: absolute;
     display: none;
 
-}
-.html {
-    text-align: center;
-    text-emphasis: bold;
-    font-size: 14px;
 }
 
 .btn {
@@ -47,8 +42,9 @@ body {
     outline: none;
 }
 
-.htmlv1:hover {
+.icons:hover {
     border-color: black;
+    border: thick;
 }
 
 .controls{
@@ -60,3 +56,77 @@ body {
 .hide{
     display:none;
 }
+
+.screen {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-self: flex-start;
+
+}
+.icons{
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.folder{
+    text-align: center;
+    float: bottom;
+    font-size: small;
+    color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.internal{
+    display: flex;
+    flex-direction: column;
+
+    float: bottom;
+    text-align: center;
+    color: whitesmoke;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.html {
+    
+    text-align: center;
+    float: bottom;
+    font-size: small;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
