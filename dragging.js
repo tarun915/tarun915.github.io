@@ -3,7 +3,7 @@ function opengithub() {
   window.open("https://www.github.com");
 }
 function openoldsite() {
-  open('indexold.html')
+  open('indexold.html');
 }
 function denied() {
   alert( "Access Denied" );
