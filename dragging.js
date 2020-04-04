@@ -10,4 +10,3 @@ function openoldsite() {
 function denied() {
   alert( "Access Denied" );
 }
-folder.on('click touchstart', denied())
