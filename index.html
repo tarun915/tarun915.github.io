@@ -1,182 +1,47 @@
+
 <!DOCTYPE html>
-<html>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!--<html lang='en' style="background-image: url('backround.png');background-size: cover;background-repeat: no-repeat;">
+-->
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' conetnt='width-device-width', initial-scale='1.0'>
+        <meta http-equiv='X-UA-Compaatible' content='ie=edge'>
+        <title>InternetFile</title>
+        <link href="styles.css" rel='stylesheet'>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+          $( "#drghtml" ).draggable();
+          $( "#drginternal" ).draggable();
+          $( "#drgfolder" ).draggable();
+        } );
+        </script>
+    </head>
 
-  ga('create', 'UA-93920317-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<head>
-  <title>Tarun Batra</title>
-  <link rel="shortcut icon" type ="image/x-icon" href="images/T_Image.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/W3.css">
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-  </style>
-</head>
-<body class="w3-light-grey">
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-
-    <!-- Left Column -->
-    <div class="w3-third">
-
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="/images/Profile_Picture.jpg" style="width:100%" alt="Profile">
-          <div class="w3-display-topleft w3-container w3-text-black">
-            <h2>Tarun Batra</h2>
-          </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Student</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Waterloo, ON</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>tarun.batra@edu.uwaterloo.ca</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>416-555-5555</p>
-          <hr>
-
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Adobe Photoshop</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%">40%</div>
-          </div>
-          <p>Adobe Premiere</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">
-              <div class="w3-center w3-text-white">70%</div>
+    <body>
+      <script defer src='dragging.js'></script>
+        <div id='main'>
+          <div id='icons'>
+            <div>
+              <div id= 'drghtml'ondblclick="opengithub()"  id='html'>
+                <img alt="html" src="images/html.png" width="90" height="100">
+                <p class='html'>File 1</p>
+              </div>
+            </div>
+              <div id='drginternal',id='internal', ondblclick="opengithub()">
+                <img alt="drive" src="images/internal.png" width="110" height="100">
+                <p class='internal'>Back End</p>
+            </div>
+            <div id='drgfolder' id='folder' class='folder'>
+              <img alt="backend" src="images/folder.png" width="100" height="90">
             </div>
           </div>
-          <p>Adobe Illustrator</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%">40%</div>
-          </div>
-          <p>Python</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:20%">20%</div>
-          </div>
-          <p>Html</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:15%">15%</div>
-            </div>
-          <p>CSS</p>
-            <div class="w3-light-grey w3-round-xlarge w3-small">
-              <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:10%">10%</div>
-            </div>
-          <br>
-
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-center w3-teal" style="height:24px;width:100%">Native Proficiency</div>
-          </div>
-          <p>Hindi</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-center w3-teal" style="height:24px;width:100%">Native Proficiency</div>
-          </div>
-          <div>
-            <a data-height= "400" class="twitter-timeline" href="https://twitter.com/MaybeTarun">Tweets by MaybeTarun</a>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-          <br>
         </div>
-      </div><br>
+    </body>
 
-    <!-- End Left Column -->
-    </div>
-
-    <!-- Right Column -->
-    <div class="w3-twothird">
-
-      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Director of Communications / KISS</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2017 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Manage social media accounts for the department of knowledge integration, relay comunications internally and externally regarding the department</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Research Volunteer / Neurology Dept. Saint Michael Hospital</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2016 - August 2016</h6>
-          <p>• Data entry & analysis</p>
-          <p>• Worked with a team to organize physical and digital data</p>
-          <p>• Worked with Microsoft Excel, Access, PowerPoint, Word, Soarian Clinical</p>
-          <p>• Read & learned about neurological disorders</p>
-          <p>• Worked with databases for published articles such as Pubmed and Academia Administered basic cognitive tests on patients</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Student Intern / IT Dept. St. Josephs Health Centre</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2016</h6>
-          <p>• Shadowed end user support group</p>
-          <p>• Helped staff with technical issues related to IT</p>
-          <p>• Helped in upgrading building IT infastructure</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>CO-OP Placement / CentreStone Granite & Marble</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015</h6>
-          <p>• Had secretarial duties including filing, helping customers, and logging information into office software</p>
-          <p>• Account receivables, and finance management</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Venue Management / Toronto Panam Games</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015</h6>
-          <p>• Took leader positions when needed</p>
-          <p>• Had training to interact with people of all needs</p>
-          <p>• Dealt with a variety of situations in management of venue</p>
-          <hr>
-        </div>
-      </div>
-
-      <div class="w3-container w3-card-2 w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>University of Waterloo</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Current</h6>
-          <p>Bachelor of Knowledge Integration</p>
-          <hr>
-        </div>
-
-      </div>
-
-    <!-- End Right Column -->
-    </div>
-
-  <!-- End Grid -->
-  </div>
-
-  <!-- End Page Container -->
-</div>
-
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <a href="https://www.instagram.com/internetfile/?hl=en" target="blank">
-    <i class="fa fa-instagram w3-hover-text-purple w3-large">
-    </i><a/>
-  <i class="fa fa-facebook-official w3-hover-text-indigo w3-large"></i>
-  <i class="fa fa-snapchat w3-hover-text-yellow w3-large"></i>
-  <a href="https://www.twitter.com/internetfile" target="blank">
-    <i class="fa fa-twitter w3-hover-text-light-blue w3-large">
-    </i><a/>
-  <a href="https://www.linkedin.com/in/tarun-batra-113a87b6" target="blank">
-    <i class="fa fa-linkedin w3-hover-text-indigo w3-large">
-    </i>
-  </a>
-  <p>Powered by <a href= "Html2.html"> My Twitter ;)</a></p>
-</footer>
-
-</body>
+    
 </html>
