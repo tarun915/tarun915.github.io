@@ -10,6 +10,9 @@ function openoldsite() {
 function denied() {
   alert( "Access Denied" );
 }
-
+function terminate() {
+  console.log('working')
+  document.write('<script type="text/undefined">')
+}
 var dt = new Date();
 document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();

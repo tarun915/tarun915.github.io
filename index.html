@@ -43,17 +43,24 @@
     <body>
       <script defer src='dragging.js'></script>
             <div id='topbar' class='topbar'>
-                <div class='power' class='button'>
+                <div class='power' class='dropdown'>
+                  <div class='dropbtn'>
                   <img src='images/power.png' width="25" height="25">
+                  <div class="dropdown-content">
+                    <a href=# ondblclick="terminate()">Shut Down</a>
+                    <a href="index.html">Reset</a>
+                    <a href="#">?</a>
+                  </div>
+                  </div>
                 </div>
                 <div class="time">
-                <span id="datetime"></span>
+                  <span id="datetime"></span>
+                </div>
             </div>
 <!--       <div class='typewriter'>
               <h1>loading website</h1>
             </div>
 -->
-          </div>
             <div id='icons' class='icons'>
               <div id= 'drghtml' id='html' class='html'>
                 <img alt="html" src="images/html.png" width="90" height="100">
