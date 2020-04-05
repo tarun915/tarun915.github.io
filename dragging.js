@@ -11,6 +11,5 @@ function denied() {
   alert( "Access Denied" );
 }
 
-function runterm(txt) {
-
-}
+var dt = new Date();
+document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
