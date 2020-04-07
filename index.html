@@ -1,7 +1,5 @@
 
 <!DOCTYPE html>
-<!--<html lang='en' style="background-image: url('backround.png');background-size: cover;background-repeat: no-repeat;">
--->
 <html lang='en'>
     <head>
         <meta charset="UTF-8">
@@ -40,7 +38,7 @@
     </head>
 
 
-    <body>
+    <body onload="startTime()">
       <script defer src='dragging.js'></script>
             <div id='topbar' class='topbar'>
                 <div class='power' class='dropdown'>
@@ -53,8 +51,8 @@
                   </div>
                   </div>
                 </div>
-                <div class="time">
-                  <span id="datetime"></span>
+                <div id="time" class="time">
+                  <span id='txt'></span>
                 </div>
             </div>
 <!--       <div class='typewriter'>
