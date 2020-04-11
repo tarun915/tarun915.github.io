@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang='en'>
     <head>
@@ -10,34 +9,19 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="jquery.ui.touch-punch.min.js"></script>
-        <script>
-        $( function() {
-          $("#drghtml").draggable();
-          $("#drghtml").click(function(){
-              if ( $(this).is('.ui-draggable-dragging') ) {
-                   return;
-              }
-            openoldsite()
-           });
-          $( "#drginternal" ).draggable();
-          $("#drginternal").click(function(){
-              if ( $(this).is('.ui-draggable-dragging') ) {
-                   return;
-              }
-            opengithub()
-           });
-          $( "#drgfolder" ).draggable();
-          $("#drgfolder").click(function(){
-              if ( $(this).is('.ui-draggable-dragging') ) {
-                   return;
-              }
-            denied()
-           });
-        } );
-        </script>
+        <style>
+          .droptarget {
+            float: center; 
+            width: 600px; 
+            height: 300px;
+            margin: 15px;
+            margin-right: 100px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+          }
+          </style>
+        
     </head>
-
-
     <body onload="startTime()">
       <script defer src='dragging.js'></script>
             <div id='topbar' class='topbar'>
@@ -47,19 +31,15 @@
                   <div class="dropdown-content">
                     <a href=# ondblclick="terminate()">Shut Down</a>
                     <a href="index.html">Reset</a>
-                    <a href='new stuff/emulator/index.html'>?</a>
+                    <a href="#">?</a>
                   </div>
                   </div>
                 </div>
                 <div id="time" class="time">
                   <span id='txt'></span>
-                </div>
+              </div>
             </div>
-<!--       <div class='typewriter'>
-              <h1>loading website</h1>
-            </div>
--->
-            <div id='icons' class='icons'>
+            <div id='icons' class='icons' >
               <div id= 'drghtml' id='html' class='html'>
                 <img alt="html" src="images/html.png" width="90" height="100">
                 <p>Old Site</p>
@@ -73,6 +53,40 @@
                 <p>New Stuff</p>
               </div>
             </div>
+            <div id=bottom class="droptarget"> 
+            </div>
+            <script>
+              $(function() {
+                $("#drghtml").draggable({
+                  snap:true
+                });
+              $(function(ide) {
+                if (ide.position == bottom.position){
+                  console.log('its working')
+                }
+              })
+                $("#drghtml").click(function(){
+                    if ( $(this).is('.ui-draggable-dragging') ) {
+                         return;
+                    }
+                  openoldsite()
+                 });
+                $( "#drginternal" ).draggable();
+                $("#drginternal").click(function(){
+                    if ( $(this).is('.ui-draggable-dragging') ) {
+                         return;
+                    }
+                  opengithub()
+                 });
+                $( "#drgfolder" ).draggable();
+                $("#drgfolder").click(function(){
+                    if ( $(this).is('.ui-draggable-dragging') ) {
+                         return;
+                    }
+                  denied()
+                 });
+              } );
+              </script>
     </body>
 
     
