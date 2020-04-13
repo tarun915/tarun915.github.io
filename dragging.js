@@ -14,6 +14,9 @@ function terminate() {
   console.log('working')
   document.write('<script type="text/undefined">')
 }
+function openvid(){
+  open('trips.html');
+}
 function startTime() {
   var today = new Date();
   var h = today.getHours() - 12;

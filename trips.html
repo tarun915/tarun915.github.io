@@ -1,0 +1,162 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .labnol {
+            padding: 5px 5px;
+            justify-content: center;
+            height: 320px;
+            width: 180px;
+
+        }
+
+        body {
+            background-color: bisque;
+
+        }
+
+        .page {
+            background-color: bisque;
+
+        }
+
+        .sheet {
+            display: flex;
+            font-family: 'Indie Flower';
+            background-color: white;
+            background: repeating-linear-gradient(white, white 25px, #9198e5 26px, #9198e5 27px);
+            background-position-y: 49px;
+            height: 400px;
+            padding: 25px;
+            margin-left: 15px;
+            margin-top: 20;
+            margin-bottom: 20;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sheet header {
+            background-color: white;
+            background: linear-gradient(white, white 48px, #9198e5 49px, #9198e5 50px);
+            height: 50px;
+        }
+
+        .sheet-title {
+            position: relative;
+            top: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+
+        .sheet-text {
+            position: relative;
+            top: 33px;
+            font-size: 22px;
+            width: 480px;
+            margin: 0 55px;
+            line-height: 27px;
+        }
+
+        .margin {
+            width: 49px;
+            height: 100%;
+        }
+
+        .l-margin {
+            float: left;
+            border-right: 2px solid pink;
+        }
+
+        .r-margin {
+            float: right;
+            border-left: 1px solid pink;
+        }
+
+        /* Styling for hole punches */
+        .l-margin {
+            position: relative;
+        }
+
+        .hole {
+            height: 20px;
+            width: 20px;
+            background-color: #555;
+            border-radius: 50%;
+            position: absolute;
+            left: 15px;
+        }
+
+        .first-hole {
+            top: 30px;
+        }
+
+        .second-hole {
+            top: 50%;
+        }
+
+        .third-hole {
+            bottom: 30px;
+        }
+
+        .notepad {
+            background-color: bisque;
+            background-image: image-set();
+            display: flex;
+            max-width: initial;
+            max-height: inherit;
+            z-index: initial;
+        }
+
+        .textblock1 {
+            text-align: center;
+            float: right;
+        }
+
+        .bottombar {
+            background-color: rgb(9, 255, 91);
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 5px;
+        }
+        .videocontainer {
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='page'>
+        <div class='sheet'>
+            <div class='videocontainer'>
+                <video class='labnol'controls
+                    poster='https://scontent-bos3-1.cdninstagram.com/v/t51.2885-15/fr/e15/p1080x1080/69486974_389305895081759_3835513404238378871_n.jpg?_nc_ht=scontent-bos3-1.cdninstagram.com&_nc_cat=111&_nc_ohc=0Sl48hrLmr4AX89F_Qk&oh=8e390dc128907f167e7d5af402921b60&oe=5E95A707'>
+                    <source
+                        src='https://scontent-bos3-1.cdninstagram.com/v/t50.16885-16/10000000_169129237556924_3221574670603165212_n.mp4?_nc_ht=scontent-bos3-1.cdninstagram.com&_nc_cat=108&_nc_ohc=AyzuzkMqMr4AX821nrB&oe=5E962DAD&oh=1ac19d8ac18e35769e25ef12df2ebe97'
+                        type='video/mp4'>
+                </video>
+            </div>
+            <div class='textblock1'>
+                <h1>April 29 2017</h1>
+                <p>lorum ipsom</p>
+            </div>
+        </div>
+        <area class="bottombar">
+        <div class='sheet'>
+            <div class='videocontainer'>
+                <iframe class='labnols' max-height='50%' max-width='100px'frameborder="0" src="https://www.youtube.com/embed/mV0SuBG-2eE"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class='textblock1'>
+                <h1>April 29 2017</h1>
+                <p>lorum ipsom</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

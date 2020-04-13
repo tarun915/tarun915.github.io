@@ -1,79 +1,90 @@
-
 <!DOCTYPE html>
 <html lang='en'>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <title>InternetFile</title>
-        <link href="styles.css" rel='stylesheet'>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="jquery.ui.touch-punch.min.js"></script>
-        <script>
-        $( function() {
-          $("#drghtml").draggable();
-          $("#drghtml").click(function(){
-              if ( $(this).is('.ui-draggable-dragging') ) {
-                   return;
-              }
-            openoldsite()
-           });
-          $( "#drginternal" ).draggable();
-          $("#drginternal").click(function(){
-              if ( $(this).is('.ui-draggable-dragging') ) {
-                   return;
-              }
-            opengithub()
-           });
-          $( "#drgfolder" ).draggable();
-          $("#drgfolder").click(function(){
-              if ( $(this).is('.ui-draggable-dragging') ) {
-                   return;
-              }
-            denied()
-           });
-        } );
-        </script>
-    </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <title>InternetFile</title>
+  <link href="styles.css" rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="jquery.ui.touch-punch.min.js"></script>
+  <script>
+    $(function () {
+      $("#drghtml").draggable();
+      $("#drghtml").click(function () {
+        if ($(this).is('.ui-draggable-dragging')) {
+          return;
+        }
+        openoldsite()
+      });
+      $("#drghtml2").draggable();
+      $("#drghtml2").click(function () {
+        if ($(this).is('.ui-draggable-dragging')) {
+          return;
+        }
+        openvid()
+      });
+      $("#drginternal").draggable();
+      $("#drginternal").click(function () {
+        if ($(this).is('.ui-draggable-dragging')) {
+          return;
+        }
+        opengithub()
+      });
+      $("#drgfolder").draggable();
+      $("#drgfolder").click(function () {
+        if ($(this).is('.ui-draggable-dragging')) {
+          return;
+        }
+        denied()
+      });
+    });
+  </script>
+</head>
 
 
-    <body onload="startTime()">
-      <script defer src='dragging.js'></script>
-            <div id='topbar' class='topbar'>
-                <div class='power' class='dropdown'>
-                  <div class='dropbtn'>
-                  <img src='images/power.png' width="25" height="25">
-                  <div class="dropdown-content">
-                    <a href=# ondblclick="terminate()">Shut Down</a>
-                    <a href="index.html">Reset</a>
-                    <a href='new stuff/emulator/index.html'>?</a>
-                  </div>
-                  </div>
-                </div>
-                <div id="time" class="time">
-                  <span id='txt'></span>
-                </div>
-            </div>
-<!--       <div class='typewriter'>
+<body onload="startTime()">
+  <script defer src='dragging.js'></script>
+  <div id='topbar' class='topbar'>
+    <div class='power' class='dropdown'>
+      <div class='dropbtn'>
+        <img src='images/power.png' width="25" height="25">
+        <div class="dropdown-content">
+          <a href=# ondblclick="terminate()">Shut Down</a>
+          <a href="index.html">Reset</a>
+          <a href='new stuff/emulator/index.html'>Secret</a>
+        </div>
+      </div>
+    </div>
+    <div id="time" class="time">
+      <span id='txt'></span>
+    </div>
+  </div>
+  <!--       <div class='typewriter'>
               <h1>loading website</h1>
             </div>
 -->
-            <div id='icons' class='icons'>
-              <div id= 'drghtml' id='html' class='html'>
-                <img alt="html" src="images/html.png" width="90" height="100">
-                <p>Old Site</p>
-              </div>
-              <div id='drginternal',id='internal' class='internal'>
-                <img alt="drive" src="images/internal.png" width="110" height="100">
-                <p>Back End</p>
-              </div>
-              <div id=drgfolder id='folder' class='folder'>
-                <img alt="backend" src="images/folder.png" width="100" height="90">
-                <p>New Stuff</p>
-              </div>
-            </div>
-    </body>
+  <div id='icons' class='icons'>
+    <div id='drghtml' id='html' class='html'>
+      <img alt="html" src="images/html.png" width="90" height="100">
+      <p>Old Site</p>
+    </div>
+    <div id='drghtml2' id='drgvid' class='html2'>
+      <img alt="html" src="images/html.png" width="90" height="100">
+      <p>Videos.html</p>
+    </div>
+    <div id='drginternal' ,id='internal' class='internal'>
+      <img alt="drive" src="images/internal.png" width="110" height="100">
+      <p>Back End</p>
+    </div>
+    <div id=drgfolder id='folder' class='folder'>
+      <img alt="backend" src="images/folder.png" width="100" height="90">
+      <p>New Stuff</p>
+    </div>
+  </div>
+</body>
 
-    
+
 </html>
