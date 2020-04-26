@@ -17,9 +17,12 @@ function terminate() {
 function openvid(){
   open('trips.html');
 }
+function openinsta(){
+  window.open('https://instagram.com/internetfile');
+}
 function startTime() {
   var today = new Date();
-  var h = today.getHours() - 12;
+  var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
   m = checkTime(m);

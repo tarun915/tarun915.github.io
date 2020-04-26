@@ -12,6 +12,7 @@
   <script src="jquery.ui.touch-punch.min.js"></script>
   <script>
     $(function () {
+      $("#note").draggable();
       $("#drghtml").draggable();
       $("#drghtml").click(function () {
         if ($(this).is('.ui-draggable-dragging')) {
@@ -25,6 +26,13 @@
           return;
         }
         openvid()
+      });
+      $("#insta").draggable();
+      $("#insta").click(function () {
+        if ($(this).is('.ui-draggable-dragging')) {
+          return;
+        }
+        openinsta()
       });
       $("#drginternal").draggable();
       $("#drginternal").click(function () {
@@ -52,7 +60,7 @@
       <div class='dropbtn'>
         <img src='images/power.png' width="25" height="25">
         <div class="dropdown-content">
-          <a href=# ondblclick="terminate()">Shut Down</a>
+          <a href='https://geekprank.com/blue-death/'>Shut Down</a>
           <a href="index.html">Reset</a>
           <a href='new stuff/emulator/index.html'>Secret</a>
         </div>
@@ -66,10 +74,19 @@
               <h1>loading website</h1>
             </div>
 -->
+<div id='note' class='note'>
+  <p contenteditable='true'>Welcome to InternetFile
+  </p>
+  <button></button>
+</div>
   <div id='icons' class='icons'>
     <div id='drghtml' id='html' class='html'>
       <img alt="html" src="images/html.png" width="90" height="100">
       <p>Old Site</p>
+    </div>
+    <div id='insta' class='html'>
+      <img alt="instagram" src="images/insta.png" width="90" height="100">
+      <p>Instagram</p>
     </div>
     <div id='drghtml2' id='drgvid' class='html2'>
       <img alt="html" src="images/html.png" width="90" height="100">
@@ -85,4 +102,5 @@
     </div>
   </div>
 </body>
+
 </html>

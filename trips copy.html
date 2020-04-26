@@ -1,0 +1,129 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .labnol {
+            padding: 5px 5px;
+            justify-content: center;
+            height: 320px;
+            width: 180px;
+
+        }
+
+
+        .fullscreen-bg {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -100;
+        }
+
+        .fullscreen-bg__video {
+            position: absolute;
+            width: 100%;
+            height: 100hv;
+            z-index: -100;
+
+        }
+
+        body {
+            background-color: bisque;
+            display: flex;
+            align-items:initial;
+            flex-wrap: wrap;
+            flex-direction: row;
+            background-image: url('assets/notepad.png');
+            background-repeat:round;
+
+        }
+
+        .page {
+            background-color: bisque;
+
+        }
+
+        .sheet {
+            display: flex;
+            font-family: 'Indie Flower';
+            background-position-y: 49px;
+            height: 100%;
+            padding: 25px;
+            align-items: center;
+            justify-content: center;
+        }
+        .notepad {
+            background-color: bisque;
+            background-image: image-set();
+            display: flex;
+            max-width: initial;
+            max-height: inherit;
+            z-index: initial;
+        }
+
+        .textblock1 {
+            text-align: center;
+            float: right;
+        }
+
+        .bottombar {
+            background-color: rgb(9, 255, 91);
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 5px;
+        }
+
+        .videocontainer {
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <div class='sheet'>
+            <div class='videocontainer'>
+                <video class="labnol" controls="" controlslist="nodownload" playsinline=""
+                    poster="https://instagram.fykz1-2.fna.fbcdn.net/v/t51.2885-15/e35/77238876_169072937790826_7797523754932776608_n.jpg?_nc_ht=instagram.fykz1-2.fna.fbcdn.net&amp;_nc_cat=110&amp;_nc_ohc=hVC3bEwDeBsAX-k3R8N&amp;oh=3b8812f979041cd61babb7e68e86351a&amp;oe=5E9C688F"
+                    preload="metadata" type="video/mp4"
+                    src="https://instagram.fykz1-2.fna.fbcdn.net/v/t50.16885-16/10000000_207666750260432_3023796689170070959_n.mp4?_nc_ht=instagram.fykz1-2.fna.fbcdn.net&amp;_nc_cat=108&amp;_nc_ohc=yLivXalUaCwAX8fi6nz&amp;oe=5E9C3FE8&amp;oh=ebfb9802984f17d46ad76821001571c7"></video>
+            </div>
+            <div class='textblock1'>
+                <h1>2018 Rewind</h1>
+                <p>A quick cut of my experiences during the year</p>
+            </div>
+        </div>
+        <div class='sheet'>
+            <div class='videocontainer'>
+                <iframe width="300" height="170"
+                    src="https://www.youtube-nocookie.com/embed/mV0SuBG-2eE?modestbranding=1" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class='textblock1'>
+                <h1>April 2018</h1>
+                <p>lorum ipsom</p>
+            </div>
+        </div>
+        <div class='sheet'>
+            <div class='videocontainer'>
+                <video class="labnol" controls="" controlslist="nodownload" playsinline=""
+                    poster="https://instagram.fykz1-1.fna.fbcdn.net/v/t51.2885-15/e35/61550831_2648482145378474_4007789184436987852_n.jpg?_nc_ht=instagram.fykz1-1.fna.fbcdn.net&amp;_nc_cat=102&amp;_nc_ohc=e7VhY6P9OJsAX-xR1Gk&amp;oh=83ed66ccbe67d963a2c209337f75ac01&amp;oe=5E99EDD4"
+                    preload="metadata" type="video/mp4"
+                    src="https://instagram.fykz1-2.fna.fbcdn.net/v/t50.16885-16/10000000_485856298822069_27697522537398272_n.mp4?_nc_ht=instagram.fykz1-2.fna.fbcdn.net&amp;_nc_cat=101&amp;_nc_ohc=bRjk70B-dHwAX_jrBw3&amp;oe=5E9A07A4&amp;oh=a5172040b96b634ad3bdca81dca074e1"></video>
+            </div>
+            <div class='textblock1'>
+                <h1>Going To Little Ceasars</h1>
+                <p>a journey about pizza and the meaning of life</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
