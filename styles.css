@@ -100,6 +100,13 @@ body {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.html:hover {
+  border: blueviolet;
+  color: aqua;
+  border-color: rgba(0,0,0,0.2);
+  border-radius: 14;
+}
 .html2 {
   cursor: grabbing;
   text-align: center;
@@ -194,6 +201,8 @@ body {
   overflow: hidden;
   z-index: -1;
 }
+.top {z-index: 2; position: relative}
+.bottom {z-index: 1; position: relative}
   
   /* The typing effect */
   @keyframes typing {

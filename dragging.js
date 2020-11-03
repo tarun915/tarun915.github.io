@@ -1,4 +1,17 @@
 const folder = document.getElementById('folder')
+$(document).ready(function() {
+  var a = 3;
+  $('#note,#drgfolder,#drghtml,#drghtml2,#drginternal,#insta').draggable({
+ start: function(event, ui) { $(this).css("z-index", a++); }
+});
+  opengithub()
+  $('#dragZone div').click(function() {
+      $(this).addClass('top').removeClass('bottom');
+      $(this).siblings().removeClass('top').addClass('bottom');
+      $(this).css("z-index", a++);
+
+  });
+});
 
 function opengithub() {
   console.log('clicked');
