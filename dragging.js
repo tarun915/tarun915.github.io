@@ -14,7 +14,7 @@ function openoldsite() {
   open('indexold.html');
 }
 function denied() {
-  alert( "Access Denied" );
+  open('Movie Reviews.html');
 }
 function terminate() {
   console.log('working')
