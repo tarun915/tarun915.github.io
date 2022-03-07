@@ -21,7 +21,7 @@ function terminate() {
   document.write('<script type="text/undefined">')
 }
 function openvid(){
-  open('trips.html');
+  open('videopage.html');
 }
 function openinsta(){
   window.open('https://instagram.com/internetfile');
