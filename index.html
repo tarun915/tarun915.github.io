@@ -19,7 +19,7 @@
         }
         openoldsite()
       });
-      $("#note,#drghtml2,#drghtml,#drgfolder,#drginternal,#insta").draggable({ containment: "#icons", scroll: false });
+      $("#note,#drghtml2,#drghtml,#drgfolder,#drginternal,#insta,#drgfolder3").draggable({ containment: "#icons", scroll: false });
 
       $("#drghtml2").click(function () {
         if ($(this).is('.ui-draggable-dragging')) {
@@ -44,6 +44,12 @@
           return;
         }
         denied()
+      });
+      $("#drgfolder3").click(function () {
+        if ($(this).is('.ui-draggable-dragging')) {
+          return;
+        }
+        resume()
       });
     });
   </script>
@@ -90,11 +96,11 @@
     </div>
     <div id=drgfolder id='folder' class='folder'>
       <img alt="backend" src="images/folder.png" width="100" height="90">
-      <p><a href=index.html></a>Movie Reviews</p>
+      <p>Movie Reviews</p>
     </div>
-    <div id=drgfolder id='folder' class='folder'>
-      <img alt="resume" src="images/html.png" width="100" height="90">
-      <p>Resume</p>
+    <div id=drgfolder3 id='folder' class='folder'>
+      <img alt="resume" src="images/html.png" width="90" height="100">
+      <p> <a href="/assets/resume 2020 Tarun.pdf"></a>Resume</p>
     </div>
     <div id=drgfolder id='folder' class='folder'>
       <div class='dropbtn'>

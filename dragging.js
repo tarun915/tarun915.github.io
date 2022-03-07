@@ -16,6 +16,9 @@ function openoldsite() {
 function denied() {
   open('Movie Reviews.html');
 }
+function resume() {
+  open('/assets/resume 2020 Tarun.pdf');
+}
 function terminate() {
   console.log('working')
   document.write('<script type="text/undefined">')
