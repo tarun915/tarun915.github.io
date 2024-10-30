@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Escape Room</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .room {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #f0f0f0;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .hint {
+            color: #e63946;
+        }
+
+        /* Server Room Styling */
+        .server-room {
+            background-color: #111;
+            color: #00ff99;
+            border: none;
+            box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .server-racks {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .rack {
+            width: 50px;
+            height: 150px;
+            background-color: #333;
+            border: 2px solid #444;
+            box-shadow: inset 0 0 8px #111;
+            position: relative;
+        }
+
+        .rack::before,
+        .rack::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: #00ff99;
+            width: 35px;
+            height: 5px;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 20px #00ff99, 0 40px #00ff99, 0 60px #00ff99, 0 80px #00ff99;
+        }
+
+        .final-clue {
+            font-size: 1.5em;
+            color: #fff;
+            background-color: #00ff99;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #00ff99;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #00ff99;
+            }
+            to {
+                box-shadow: 0 0 20px #00ff99;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Cyber Escape Room</h1>
+    <div id="instructions">
+        <p>Welcome! Solve each IT challenge to unlock the next room. Good luck!</p>
+    </div>
+
+    <!-- Room 1 -->
+    <div id="room-1" class="room">
+        <h2>Room 1: Zscaler Logout</h2>
+        <p>Enter the logout code for Zscaler:</p>
+        <input type="text" id="passwordInput" placeholder="Enter logout code">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="passwordHint" class="hint"></p>
+    </div>
+
+    <!-- Room 2 -->
+    <div id="room-2" class="room hidden">
+        <h2>Room 2: Repository Path</h2>
+        <p>What is the file path for our repository?</p>
+        <input type="text" id="filePathInput" placeholder="starting with \\">
+        <button onclick="checkFilePath()">Submit</button>
+        <p id="fileHint" class="hint"></p>
+    </div>
+
+    <!-- Room 3 -->
+    <div id="room-3" class="room hidden">
+        <h2>Room 3: IP Lookup</h2>
+        <p>Which IP will show FollwoMe?</p>
+        <button onclick="chooseIP('10.3.14.1')">10.3.14.1</button>
+        <button onclick="chooseIP('10.150.2.262')">10.150.2.262</button>
+        <p id="networkHint" class="hint"></p>
+    </div>
+
+    <!-- Room 4 -->
+    <div id="room-4" class="room hidden">
+        <h2>Room 4: Server IP for LAPS password</h2>
+        <p>Enter the server IP if you need a LAPs password on YYZ:</p>
+        <input type="text" id="serverIPInput" placeholder="Enter server IP">
+        <button onclick="checkServerIP()">Submit</button>
+        <p id="serverHint" class="hint"></p>
+    </div>
+
+    <!-- Final Room -->
+    <div id="final-room" class="room hidden" class="server-room">
+        <h2>Server Room: Congratulations!</h2>
+        <div class="server-racks">
+            <div class="rack"></div>
+            <div class="rack"></div>
+            <div class="rack"></div>
+        </div>
+        <p>You've unlocked the final clue for the scavenger hunt:</p>
+        <p class="final-clue">SECURE-2024</p>
+    </div>
+
+    <script>
+        // JavaScript Functions
+
+        // Room 1: Zscaler Logout Code
+        function checkPassword() {
+            const password = document.getElementById("passwordInput").value;
+            if (password === "12345_gtaa") {
+                document.getElementById("room-2").classList.remove("hidden");
+                document.getElementById("passwordHint").textContent = "Correct! You've unlocked Room 2.";
+            } else {
+                document.getElementById("passwordHint").textContent = "Incorrect! Try again.";
+            }
+        }
+
+        // Room 2: Repository File Path
+        function checkFilePath() {
+            const filePath = document.getElementById("filePathInput").value.toLowerCase();
+            if (filePath === "\\\\yyz-fpr03" || filePath === "\\\\yyz-fpr03\\") {
+                document.getElementById("room-3").classList.remove("hidden");
+                document.getElementById("fileHint").textContent = "Nice! Room 3 is now open.";
+            } else {
+                document.getElementById("fileHint").textContent = "Nope! Keep looking!";
+            }
+        }
+
+        // Room 3: IP Lookup
+        function chooseIP(ip) {
+            if (ip === "10.3.14.1") {
+                document.getElementById("room-4").classList.remove("hidden");
+                document.getElementById("networkHint").textContent = "Correct! Room 4 is now unlocked!";
+            } else {
+                document.getElementById("networkHint").textContent = "Incorrect IP! Try the other one.";
+            }
+        }
+
+        // Room 4: Server IP for LAPs Password
+        function checkServerIP() {
+            const serverIP = document.getElementById("serverIPInput").value;
+            if (serverIP === "10.1.2.14") {
+                document.getElementById("final-room").classList.remove("hidden");
+                document.getElementById("serverHint").textContent = "Correct! The Server Room is now unlocked!";
+            } else {
+                document.getElementById("serverHint").textContent = "Incorrect IP! Try again.";
+            }
+        }
+    </script>
+</body>
+</html>
