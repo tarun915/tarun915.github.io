@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.room {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.hidden {
+    display: none;
+}
+
+.hint {
+    color: #e63946;
+}
+
+/* Server Room Styling */
+.server-room {
+    background-color: #111;
+    color: #00ff99;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.server-racks {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.rack {
+    width: 50px;
+    height: 150px;
+    background-color: #333;
+    border: 2px solid #444;
+    box-shadow: inset 0 0 8px #111;
+    position: relative;
+}
+
+.rack::before,
+.rack::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #00ff99;
+    width: 35px;
+    height: 5px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 20px #00ff99, 0 40px #00ff99, 0 60px #00ff99, 0 80px #00ff99;
+}
+
+.final-clue {
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #00ff99;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ff99;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #00ff99;
+    }
+    to {
+        box-shadow: 0 0 20px #00ff99;
+    }
+}
+
+.hidden {
+    display: none;
+}
