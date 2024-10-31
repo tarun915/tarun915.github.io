@@ -33,8 +33,8 @@
             color: #e63946;
         }
 
-        /* Server Room Styling */
-        .server-room {
+        /* Final Room Styling */
+        .final-room {
             background-color: #111;
             color: #00ff99;
             border: none;
@@ -48,6 +48,7 @@
             display: flex;
             gap: 15px;
             margin: 20px 0;
+            justify-content: center; /* Center align racks */
         }
 
         .rack {
@@ -120,7 +121,7 @@
     <!-- Room 3 -->
     <div id="room-3" class="room hidden">
         <h2>Room 3: IP Lookup</h2>
-        <p>Which IP will show FollwoMe?</p>
+        <p>Which IP will show FollowMe?</p>
         <button onclick="chooseIP('10.3.14.1')">10.3.14.1</button>
         <button onclick="chooseIP('10.150.2.262')">10.150.2.262</button>
         <p id="networkHint" class="hint"></p>
@@ -128,15 +129,15 @@
 
     <!-- Room 4 -->
     <div id="room-4" class="room hidden">
-        <h2>Room 4: Server IP for LAPS password</h2>
-        <p>Enter the server IP if you need a LAPs password on YYZ:</p>
+        <h2>Room 4: Server IP for LAPs Password</h2>
+        <p>Enter the server IP if you need a LAPs password on yyz:</p>
         <input type="text" id="serverIPInput" placeholder="Enter server IP">
         <button onclick="checkServerIP()">Submit</button>
         <p id="serverHint" class="hint"></p>
     </div>
 
     <!-- Final Room -->
-    <div id="final-room" class="room hidden" class="server-room">
+    <div id="final-room" class="room hidden">
         <h2>Server Room: Congratulations!</h2>
         <div class="server-racks">
             <div class="rack"></div>
@@ -149,6 +150,13 @@
 
     <script>
         // JavaScript Functions
+        window.onload = function() {
+            // Ensure all rooms are hidden initially
+            document.getElementById("room-2").classList.add("hidden");
+            document.getElementById("room-3").classList.add("hidden");
+            document.getElementById("room-4").classList.add("hidden");
+            document.getElementById("final-room").classList.add("hidden");
+        };
 
         // Room 1: Zscaler Logout Code
         function checkPassword() {
@@ -185,7 +193,7 @@
         // Room 4: Server IP for LAPs Password
         function checkServerIP() {
             const serverIP = document.getElementById("serverIPInput").value;
-            if (serverIP === "10.1.2.14") {
+            if (serverIP === "10.11.3.14") {
                 document.getElementById("final-room").classList.remove("hidden");
                 document.getElementById("serverHint").textContent = "Correct! The Server Room is now unlocked!";
             } else {
