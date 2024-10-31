@@ -145,7 +145,7 @@
             <div class="rack"></div>
         </div>
         <p>You've unlocked the final clue for the scavenger hunt:</p>
-        <p class="final-clue">SECURE-2024</p>
+        <p class="final-clue"></p>
     </div>
 
     <script>
@@ -186,14 +186,14 @@
                 document.getElementById("room-4").classList.remove("hidden");
                 document.getElementById("networkHint").textContent = "Correct! Room 4 is now unlocked!";
             } else {
-                document.getElementById("networkHint").textContent = "Incorrect IP! Try the other one.";
+                document.getElementById("networkHint").textContent = "Incorrect IP! Someone call networking";
             }
         }
 
         // Room 4: Server IP for LAPs Password
         function checkServerIP() {
             const serverIP = document.getElementById("serverIPInput").value;
-            if (serverIP === "10.11.3.14") {
+            if (serverIP === "10.251.208.14") {
                 document.getElementById("final-room").classList.remove("hidden");
                 document.getElementById("serverHint").textContent = "Correct! The Server Room is now unlocked!";
             } else {
